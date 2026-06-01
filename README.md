@@ -1,3 +1,13 @@
+---
+title: Rainfall Prediction LSTM
+emoji: 🌧️
+colorFrom: blue
+colorTo: indigo
+sdk: streamlit
+app_file: app/main.py
+pinned: false
+---
+
 # ⛈️ Rainfall Prediction and Climate Trend Analysis using LSTM
 
 An end-to-end Machine Learning, Deep Learning, and regional Climate-Risk Analytics system that forecasts daily rainfall depth, maps categorical precipitation severity, and alerts for drought and flood hazards. Operating on **15 years of real meteorological observations (2011–2025)** extracted programmatically from the **NASA POWER API** across five climatically diverse cities, this portfolio-grade repository incorporates modular data science engineering pipelines, baseline ML regressors, a multi-class weather classifier, and a stacked **PyTorch LSTM** network.
