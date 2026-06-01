@@ -67,7 +67,7 @@ st.markdown("""
         border: 1px solid #166534;
     }
 </style>
-""", unsafe_allow_index=True)
+""", unsafe_allow_html=True)
 
 # ----------------------------------------------------
 # DEFINE MODELS AND UTILITIES
@@ -299,7 +299,7 @@ with tab_map:
                 <p><b>30-Day Rainfall Sum:</b> {latest_record['Rain_30d_Sum']:.1f} mm (Historical Normal: {latest_record['Rain_30d_Sum'] + latest_record['Precip_Deficit']:.1f} mm)</p>
                 <p><b>Recommended Action:</b> Implement municipal water-conservation policies, prioritize agricultural drip irrigation, and ration surface reservoir resources.</p>
             </div>
-            """, unsafe_allow_index=True)
+            """, unsafe_allow_html=True)
         else:
             st.markdown(f"""
             <div class="risk-alert risk-low">
@@ -308,7 +308,7 @@ with tab_map:
                 <p><b>30-Day Rainfall Sum:</b> {latest_record['Rain_30d_Sum']:.1f} mm</p>
                 <p>No agricultural or moisture-deficit anomalies detected. Standard reservoir discharge patterns are recommended.</p>
             </div>
-            """, unsafe_allow_index=True)
+            """, unsafe_allow_html=True)
             
     with col_risk2:
         st.subheader("🌊 Flood & Heavy Precipitation Desk")
@@ -321,7 +321,7 @@ with tab_map:
                 <p>Extreme rainfall has exceeded critical infiltration indexes, presenting a high danger of flash flooding and waterlogging.</p>
                 <p><b>Recommended Action:</b> Deploy municipal storm clearance trucks, active pump grids, and coordinate high-alert drainage protocols.</p>
             </div>
-            """, unsafe_allow_index=True)
+            """, unsafe_allow_html=True)
         else:
             st.markdown(f"""
             <div class="risk-alert risk-low">
@@ -329,7 +329,7 @@ with tab_map:
                 <p><b>Station:</b> {selected_city} | <b>Daily Rainfall Depth:</b> {latest_record['Rainfall']:.1f} mm</p>
                 <p>Precipitation thresholds are well within standard regional absorption capacities.</p>
             </div>
-            """, unsafe_allow_index=True)
+            """, unsafe_allow_html=True)
 
     st.markdown("---")
     # Glassmorphic metrics cards
@@ -341,28 +341,28 @@ with tab_map:
             <div class="metric-val">{city_raw['Temperature'].mean():.2f} °C</div>
             <div class="metric-label">Average Station Temperature</div>
         </div>
-        """, unsafe_allow_index=True)
+        """, unsafe_allow_html=True)
     with col_m2:
         st.markdown(f"""
         <div class="metric-card">
             <div class="metric-val">{city_raw['Humidity'].mean():.1f}%</div>
             <div class="metric-label">Average Relative Humidity</div>
         </div>
-        """, unsafe_allow_index=True)
+        """, unsafe_allow_html=True)
     with col_m3:
         st.markdown(f"""
         <div class="metric-card">
             <div class="metric-val">{city_raw['Rainfall'].max():.1f} mm</div>
             <div class="metric-label">Maximum Recorded Daily Rainfall</div>
         </div>
-        """, unsafe_allow_index=True)
+        """, unsafe_allow_html=True)
     with col_m4:
         st.markdown(f"""
         <div class="metric-card">
             <div class="metric-val">{city_raw['Rainfall'].mean() * 365.25:.1f} mm</div>
             <div class="metric-label">Annual Precipitation Average</div>
         </div>
-        """, unsafe_allow_index=True)
+        """, unsafe_allow_html=True)
 
 # ----------------------------------------------------
 # TAB 2: CLIMATE TREND ANALYTICS
